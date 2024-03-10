@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cocacola Landing Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section>
+            <div class="circle"></div>
+            <header>
+                <a href="#"><img src="logo.png" class="logo"></a>
+                <div class="toggle active" onclick="toggleMenu()"></div>
+                <ul class="navigation active">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">What's New</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>Taste the Feelings</h2>
+                    <p>
+                        At Coca-Cola, we believe in delivering more than just a beverage; we provide an unparalleled refreshing experience that invigorates the senses and uplifts the spirit.
+                         From the moment you twist open a bottle or crack open a can of our iconic Coca-Cola, you're greeted by the unmistakable sound of effervescence and the enticing aroma of our secret blend of natural flavors.
+                         With every sip, you're transported to a world of pure refreshment, where the crisp, bubbly texture dances on your palate, leaving behind a wave of invigorating satisfaction. 
+                         Our commitment to quality is unwavering, as each batch of Coca-Cola is crafted with the utmost care and attention to detail, ensuring that every sip delivers the same timeless taste that has delighted generations of consumers worldwide. Whether enjoyed ice-cold on a hot summer day or shared among friends at a gathering, Coca-Cola embodies the essence of refreshment, bringing joy and vitality to every moment. 
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div class="imgBox">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="cocacola1.png"></div>
+                            <div class="swiper-slide"><img src="cocacola2.png"></div>
+                            <div class="swiper-slide"><img src="cocacola3.png"></div>
+                            <div class="swiper-slide"><img src="cocacola4.png"></div>
+                            <div class="swiper-slide"><img src="cocacola5.png"></div>
+                            <div class="swiper-slide"><img src="cocacola6.png"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <ul class="sci">
+                <li><a href="#"><img src="facebook.png"></a></li>
+                <li><a href="#"><img src="twitter.png"></a></li>
+                <li><a href="#"><img src="instagram.png"></a></li>
+            </ul>
+        </section>
+        
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var swiper = new Swiper('.swiper-container', {
+                    effect: 'coverflow',
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: 'auto',
+                    coverflowEffect: {
+                         rotate: 0,
+                         stretch: 0,
+                         depth: 200,
+                         modifier: 1,
+                         slideShadows: true,
+                    },
+                pagination: {
+                      el: '.swiper-pagination',
+                },
+                loop: true,
+                speed: 250,
+                autoplay: {
+                    delay: 3000,
+                 },
+               });
+           });
+
+
+           function toggleMenu(){ 
+                 const menuToggle=document.querySelector('.toggle');
+                 const navigation=document.querySelector('.navigation');
+                 menuToggle.classList.toggle('active');
+                 navigation.classList.navigation('acive');
+           } 
+        </script>
+    </body>
+</html>
